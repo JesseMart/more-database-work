@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    New Dish
+    <form action="/newdish" method="POST">
+        <select name="category" >
+            <% categories.forEach((record)=>{ %>
+
+                <option value=" <%= record.id %>"> <%=record.name %></option>
+                
+            <% }) %>
+        </select>
+        title: <input type="text" name="title" placeholder="title"><br><br>
+
+        description: <input type="text" name="description" placeholder="description"><br><br>
+
+        price: <input type="text" name="price" placeholder="price"><br><br>
+
+        imageURL: <input type="text" name="imageURL" placeholder="image URL">
+
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
+
+<!-- the name tag inside the inpout tag, send the from data inside the inspect tools -->

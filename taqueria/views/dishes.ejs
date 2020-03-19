@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/newdish"> Back to New Dish </a>
+    Dishes
+    <% dishes.forEach(record => { %>
+
+    <h1> <%= record.name %> </h1>
+
+    <h2> <%= record.food_description %></h2>
+
+    <h3> <%= record.price %> </h3>
+
+    <img height = "120px" src=" <%= record.img_url %>" alt="">
+
+    <% }) %>
+</body>
+</html>
